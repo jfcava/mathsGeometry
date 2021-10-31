@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <title>Maths for Geometry</title>
+    <style>
+        body {
+            font-family: 'Zen kurenaido', sans-serif;
+            background-color: papayawhip;
+        }
+
+        .main-title {
+            text-align: center;
+        }
+
+        .main-container {
+            display: flex;
+        }
+
+        .cuadrado-container {
+            display: flex;
+            width: 400px;
+            flex-direction: column;
+            margin: 20px;
+            background-color: bisque;
+            border-radius: 30px;
+        } 
+
+        .triangulo-container {
+            display: flex;
+            width: 400px;
+            flex-direction: column;
+            margin: 20px;
+            background-color: bisque;
+            border-radius: 30px;
+        } 
+
+        .container-title {
+            margin-bottom: 20px;
+            margin-top: 0px;
+        }
+
+        .container-label {
+            margin-bottom: 0px;
+        }
+
+        .container-input {
+            width: 200px;
+            height: 50px;
+            border-radius: 20px;
+            border: 0px;
+            margin: 20px;
+            padding: 15px;
+            box-sizing: border-box;
+            
+        }
+
+        .inputs-container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container-button--primary {
+            margin: 4px;
+            width: 100px;
+            height: 40px;
+            border: 0px;
+            border-radius: 10px;
+            background-color: palegreen;
+        }
+        
+        .container-button--secondary {
+            margin: 4px;
+            width: 100px;
+            height: 40px;
+            border: 0px;
+            border-radius: 10px;
+            background-color: palegreen;
+        }
+
+        .container-button--secondary:hover {
+            background-color: lightgreen;
+        }
+            
+        .container-button--primary:hover {
+            background-color: lightgreen;
+        }
+
+        .container-button--primary:active {
+            background-color: palegreen;
+        }
+        
+        .container-button--secondary:active {
+            background-color: palegreen;
+        }
+
+        .button-container {
+            display: flex;
+        }
+
+        .results {
+            background-color: white;
+            width: 100px;
+            height: 40px;
+            margin: 20px;
+            border-radius: 10px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }   
+
+    </style>
+</head>
+<body>
+    <h1 class="main-title">Matemáticas para Geometría</h1>
+    
+    <div class="main-container">
+        
+        <div class="cuadrado-container">
+           <div class="inputs-container">
+                <h2 class="container-primary-title">Cuadrado</h2>
+                <p class="container-title">Calcula el perímetro y el área de un cuadrado</p>
+                <label for="number" class="container-label">Ingresa la medida de un lado del cuadrado</label>
+                <input id="inputValor" type="number" class="container-input">
+                <div class="button-container">
+                    <button type="button" onclick="calcularPerimetroCuadrado()" class="container-button--primary">Calcular Perímetro</button>
+                    <button onclick="calcularAreaCuadrado()" class="container-button--secondary">Calcular Área</button>
+                </div>
+                <div class="results">
+                    <p id="resultadoFinalCuadrado" class="results-p"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="triangulo-container">
+            <div class="inputs-container">
+                 <h2 class="container-primary-title">Triángulo</h2>
+                 <p class="container-title">Calcula el perímetro y el área de un triángulo</p>
+                 <label for="number" class="container-label">Ingresa la medida del lado A del triangulo</label>
+                 <input id="ladoATriangulo" type="number" class="container-input">
+
+                 <label for="number" class="container-label">Ingresa la medida del lado B del triángulo</label>
+                 <input id="ladoBTriangulo" type="number" class="container-input">
+
+                 <label for="number" class="container-label">Ingresa la medida de la base del triángulo</label>
+                 <input id="baseTriangulo" type="number" class="container-input">
+
+                 <label for="number" class="container-label">Ingresa la medida de la altura del triángulo</label>
+                 <input id="alturaTriangulo" type="number" class="container-input">
+
+                 <div class="button-container">
+                     <button type="button" onclick="calcularPerimetroTriangulo()" class="container-button--primary">Calcular Perímetro</button>
+                     <button onclick="calcularAreaTriangulo()" class="container-button--secondary">Calcular Área</button>
+                 </div>
+                 <div class="results">
+                     <p id="resultadoFinalTriangulo" class="results-p"></p>
+                 </div>
+             </div>
+         </div>
+
+    </div>
+
+    <script src="mathsGeometry.js"></script>
+</body>
+</html>
